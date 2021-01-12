@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+}
+
+.header__left {
+  object-fit: contain;
+  height: 40px;
+}
