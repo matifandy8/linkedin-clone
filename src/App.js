@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
 import Widgets from "./components/Widgets";
-import { logout, selectUser } from "./features/userSlice";
+import { logout, selectUser, login } from "./features/userSlice";
 import { auth } from "./firebase";
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
           login({
             email: userAuth.user.email,
             uid: userAuth.user.uid,
-            displayName: name,
-            photoURL: profilePic,
+            displayName: userAuth.displayName,
+            photoURL: userAuth.photoURL,
           })
         );
       } else {

@@ -11,7 +11,7 @@ function Login() {
   const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
 
-  const loginToApp = () => {
+  const loginToApp = (e) => {
     e.preventDefault();
 
     auth
@@ -29,7 +29,7 @@ function Login() {
       .catch((error) => alert(error));
   };
 
-  const register = (e) => {
+  const register = () => {
     if (!name) {
       return alert("Please enter a full name");
     }
