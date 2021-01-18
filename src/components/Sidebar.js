@@ -8,10 +8,12 @@ function Sidebar() {
   const user = useSelector(selectUser);
 
   const recentItem = (topic) => {
-    <div className="sidebar__recentItem">
-      <span className="sidebar__hash">#</span>
-      <p>{topic}</p>
-    </div>;
+    return (
+      <div className="sidebar__recentItem">
+        <span className="sidebar__hash">#</span>
+        <p>{topic}</p>
+      </div>
+    );
   };
 
   return (
